@@ -1,5 +1,5 @@
 def lton(x):
-    l = '123456789AĄaąBbCĆcćDdEĘeęFfGgHhIiJjKkŁLlłMmŃNnńÓOoóPpQqRrŚSsśTtUuVvWwXxYyŻŹZzżź,.' #Zbior znakow do szyfracji
+    l = '0123456789AĄaąBbCĆcćDdEĘeęFfGgHhIiJjKkŁLlłMmŃNnńÓOoóPpQqRrŚSsśTtUuVvWwXxYyŻŹZzżź,.' #Zbior znakow do szyfracji
     y = l.index(x)
     y += 1
     return y
@@ -9,7 +9,7 @@ def lton(x):
 
 def ntol(x):
     x = float(x)
-    l = '123456789AĄaąBbCĆcćDdEĘeęFfGgHhIiJjKkŁLlłMmŃNnńÓOoóPpQqRrŚSsśTtUuVvWwXxYyŻŹZzżź,.' #Zbior znakow do deszyfracji
+    l = '0123456789AĄaąBbCĆcćDdEĘeęFfGgHhIiJjKkŁLlłMmŃNnńÓOoóPpQqRrŚSsśTtUuVvWwXxYyŻŹZzżź,.' #Zbior znakow do deszyfracji
     for i in l:
         if x == float(l.index(i)) + 1:
             return i
