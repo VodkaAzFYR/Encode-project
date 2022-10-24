@@ -19,7 +19,7 @@ window = sg.Window("pyencoder", layout)
 
 def encode():
     global ps
-    ps = int(sg.popup_get_text("Enter your key", password_char="*"))
+    ps = sg.popup_get_text("Enter your key", password_char="*")
     file = open(values["Input"], "r").read()
     encoded_file = hashowanie_cod.encode(file, ps)
     open(values["Input"], "w").write(encoded_file)
@@ -29,7 +29,7 @@ def encode():
 def decode():
     global ps
     try:
-        ps = int(sg.popup_get_text("Enter your key", password_char="*"))
+        ps = sg.popup_get_text("Enter your password", password_char="*")
         file_2 = open(values["Input"], "r").read()
         decoded_file = hashowanie_dec.decode(file_2, ps)
         open(values["Input"], "w").write(decoded_file)
